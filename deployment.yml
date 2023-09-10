@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: reddit-clone-deployment
+  name: webkube-deployment
   labels:
-    app: reddit-clone
+    app: webkube
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: reddit-clone
+      app: webkube
   template:
     metadata:
       labels:
-        app: reddit-clone
+        app: webkube
     spec:
       containers:
-      - name: reddit-clone
-        image: rohanrustagi18/redditclone
+      - name: webkube
+        image: mohdatpi/redditclone
         ports:
         - containerPort: 3000
